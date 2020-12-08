@@ -1,0 +1,26 @@
+{
+    "name": "Disable Likes",
+    "version": "1.1",
+    "description": "Disables instagram likes.",
+
+    "permissions": [
+        "storage",
+        "declarativeContent",
+        "activeTab",
+        "tabs"
+    ],
+
+    "browser_action": {
+        "default_popup": "web.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://www.instagram.com/direct/*", "http://www.instagram.com/direct/*"],
+            "css": ["style.css"],
+            "js": ["js.js"]
+        }
+    ],
+
+    "manifest_version": 2
+}
